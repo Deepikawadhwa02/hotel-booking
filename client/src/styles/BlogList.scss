@@ -1,0 +1,51 @@
+/* BlogList.scss */
+
+.blog-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.blog-card button:hover {
+  background-color: #357abd;
+}
+
+.blog-card button:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+.blog-card button:nth-child(2):hover {
+  background-color: #c0392b;
+}
+
+.edit-blog input,
+.edit-blog textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.edit-blog button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-blog button:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+.edit-blog button:hover {
+  background-color: #357abd;
+}

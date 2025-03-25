@@ -1,0 +1,158 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("../../public/assets/beach_cat.jpg") center;
+  background-size: cover;
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 40%;
+    padding: 40px;
+    background-color: rgba(216, 201, 201, 0.899);
+    border-radius: 20px;
+
+    @include lg {
+      width: 60%
+    }
+
+    @include mm {
+      width: 80%
+    }
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      input {
+        width: 100%;
+        padding: 7px 15px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        outline: none;
+        text-align: center;
+        color: rgb(0, 0, 0);
+
+        input:not(:placeholder-shown):focus {
+          background: transparent; /* or background: none; */
+        }
+
+        &::placeholder {
+          color: rgb(8, 8, 8);
+        }
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+
+        img {
+          width: 25px;
+        }
+      }
+
+      button {
+        margin-top: 15px;
+
+        @include buttonStyle;
+        width: 50%;
+
+        &:hover {
+          box-shadow: 0 0 10px 3px rgb(0, 0, 0);
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 13px;
+      margin-top: 10px;
+      text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.register {
+  &_content {
+    &_form {
+      .error-text {
+        color: #ff4444;
+        font-size: 0.8rem;
+        margin-top: -10px;
+        margin-bottom: 10px;
+      }
+
+      .error {
+        color: #ff4444;
+        background-color: #ffe6e6;
+        padding: 10px;
+        border-radius: 4px;
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .preview-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: #666;
+        }
+      }
+
+      .upload-label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      button {
+        &.submitting {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+
+        &:disabled {
+          background-color: #cccccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

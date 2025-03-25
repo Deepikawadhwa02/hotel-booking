@@ -1,0 +1,106 @@
+.review-form-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+  
+    .review-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  
+      .rating-selector {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        label {
+          font-weight: 500;
+        }
+  
+        .stars {
+          display: flex;
+          gap: 0.25rem;
+  
+          .star-button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #dddddd;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            padding: 0;
+            
+            &:hover {
+              transform: scale(1.1);
+            }
+  
+            &.filled {
+              color: #ff385c;
+            }
+          }
+        }
+      }
+  
+      .review-input {
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          border: 1px solid #dddddd;
+          border-radius: 8px;
+          resize: vertical;
+          min-height: 100px;
+          font-family: inherit;
+          
+          &:focus {
+            outline: none;
+            border-color: #ff385c;
+            box-shadow: 0 0 0 2px rgba(255, 56, 92, 0.1);
+          }
+  
+          &::placeholder {
+            color: #717171;
+          }
+        }
+      }
+  
+      .error-message {
+        color: #ff385c;
+        font-size: 0.9rem;
+        margin-top: -0.5rem;
+      }
+  
+      .submit-review {
+        background: #ff385c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        
+        &:hover {
+          background: #e31c5f;
+        }
+  
+        &:disabled {
+          background: #dddddd;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .review-form-container {
+      padding: 1rem;
+    }
+  }
